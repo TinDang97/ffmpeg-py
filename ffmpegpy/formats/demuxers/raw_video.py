@@ -1,7 +1,8 @@
+
+from ffmpegpy.common import set_video_size
+from ffmpegpy.util.pyopt import option, in_list_filter, min_value_filter
 from ..format import Demuxer, FormatDemuxer
-from ...util.pyopt import option, in_list_filter, min_value_filter
 from ..pixel_format import PixelFormat
-from ...common import set_video_size
 
 
 class RawVideo(Demuxer):

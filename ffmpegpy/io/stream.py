@@ -1,28 +1,23 @@
 import re
 import sys
 
-from .util import check_type, convert_kwargs_to_cmd_line_args
-from .util.pyopt import Options, option, in_list_filter, is_not_params_filter, \
+from ffmpegpy.util import check_type, convert_kwargs_to_cmd_line_args
+from ffmpegpy.util.pyopt import Options, option, in_list_filter, is_not_params_filter, \
     min_value_filter, type_filter, InterruptedSetOption
-from util.constant import ConstantClass
+from ffmpegpy.util.constant import ConstantClass
 
-from .codecs import Codec, EncodeVideo, DecodeVideo
-from library.ffmpeg.formats.format import Muxer, V4L2, Demuxer
-from .hwaccel import HWAccel, HWAccelType
+from ffmpegpy.codecs.coding import Codec, Encoding, Decoding
+from ffmpegpy.formats.format import Muxer, V4L2, Demuxer
+from ffmpegpy.hwaccel import HWAccel, HWAccelType
 
 REGEX_TIME_FMT = re.compile(r"(\d{1,2})[:](\d{1,2})[:](\d{1,2})")
 LINUX_DEVICE = "/dev/video"
 
 
 __all__ = [
-    'PixelFormat', 'RTSPTransport', 'LogLevel', 'VSync',
+    'LogLevel', 'VSync',
     'InputStream', 'OutputStream', 'InputOptionsBase'
 ]
-
-
-class RTSPTransport(ConstantClass):
-    TCP = "tcp"
-    UDP = "udp"
 
 
 class LogLevel(ConstantClass):
@@ -37,10 +32,6 @@ class VSync(ConstantClass):
     VFR = 'vfr'
     DROP = 'drop'
     AUTO = 'auto'
-
-
-class InputOptionsBase(Options):
-    rtsp_transport = option("rtsp_transport", in_list_filter(RTSPTransport))
 
 
 class StreamOptions(Options):

@@ -1,6 +1,6 @@
 from ffmpegpy.util.pyopt import option, Option
-from ..coding import Encoding, Decoding, Codec
-from ..stream import Audio
+from ffmpegpy.codecs.coding import Encoding, Decoding, Codec
+from ffmpegpy.codecs.stream import Audio
 
 __all__ = [
     "AudioCodec", "AudioDecoding", "AudioEncoding"

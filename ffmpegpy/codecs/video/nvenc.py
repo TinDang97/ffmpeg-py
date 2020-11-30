@@ -3,7 +3,7 @@ from ffmpegpy.util.constant import ConstantClass
 from ffmpegpy.util.pyopt import option, in_list_filter, max_value_filter, in_range_filter, type_filter
 
 from .libx import LibX
-from .vcodec import VideoCodec
+from ..vcodec import VideoCodec
 
 """
 ffmpegpy -hide_banner -h encoder=nvenc

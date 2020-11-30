@@ -4,7 +4,7 @@ from ffmpegpy.value.params import Params, ParamsType
 from ffmpegpy.util.constant import ConstantClass
 from ffmpegpy.util.pyopt import option, in_list_filter, in_range_filter, type_filter
 
-from .vcodec import VideoCodec, VideoEncoding
+from ..vcodec import VideoCodec, VideoEncoding
 
 __all__ = [
     'Profile', 'Preset', 'Tune', 'NalHRD',

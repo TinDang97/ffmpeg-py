@@ -1,6 +1,6 @@
-from util import get_attr_values, check_type, convert_kwargs_to_cmd_line_args
-from util.io import Subprocess
-from util.option import Options, option, in_list_filter, is_not_params_filter
+from ffmpegpy.util import check_type, convert_kwargs_to_cmd_line_args
+from ffmpegpy.util.io import Subprocess
+from ffmpegpy.util.pyopt import Options, option, in_list_filter, is_not_params_filter
 
 from .io import InputStream, OutputStream, LogLevel, RTSPTransport, VSync
 

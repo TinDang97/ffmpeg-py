@@ -1,6 +1,6 @@
 from ffmpegpy.util.pyopt import option, Option, min_value_filter, in_range_filter, type_filter
-from ..coding import Encoding, Decoding, Codec
-from ..stream import Video
+from ffmpegpy.codecs.coding import Encoding, Decoding, Codec
+from ffmpegpy.codecs.stream import Video
 
 __all__ = [
     "VideoDecoding", "VideoEncoding", "VideoCodec"
